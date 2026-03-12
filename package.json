@@ -1,1 +1,32 @@
-{\n  "name": "mcp-neo4j-knowledge-graph",\n  "version": "1.0.0",\n  "main": "dist/index.js",\n  "scripts": {\n    "build": "tsc",\n    "dev": "ts-node src/index.ts",\n    "start": "node dist/index.js",\n    "lint": "eslint .",\n    "format": "prettier --write ."\n  },\n  "dependencies": {\n    "neo4j-driver": "^4.4.0",\n    "@modelcontextprotocol/sdk": "^1.0.0"\n  },\n  "devDependencies": {\n    "typescript": "^4.5.0",\n    "ts-node": "^10.0.0",\n    "eslint": "^7.32.0",\n    "prettier": "^2.5.0"\n  }\n}
+{
+  "name": "mcp-neo4j-knowledge-graph",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "dotenv": "^17.3.1",
+    "neo4j-driver": "^5.28.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.4.0",
+    "@typescript-eslint/eslint-plugin": "^8.57.0",
+    "@typescript-eslint/parser": "^8.57.0",
+    "@vitest/coverage-v8": "^4.0.18",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.57.0",
+    "vitest": "^4.0.18"
+  }
+}
