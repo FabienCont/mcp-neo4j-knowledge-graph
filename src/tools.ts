@@ -2,9 +2,9 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 import { verifyConnectivity, runQuery } from "./neo4j.js";
 
-const IDENTIFIER_RE = /^[A-Za-z_][A-Za-z0-9_]*$/;
+export const IDENTIFIER_RE = /^[A-Za-z_][A-Za-z0-9_]*$/;
 
-function validateIdentifier(value: string, kind: string): void {
+export function validateIdentifier(value: string, kind: string): void {
   if (!IDENTIFIER_RE.test(value)) {
     throw new Error(
       `Invalid ${kind} "${value}": must match ^[A-Za-z_][A-Za-z0-9_]*$`
